@@ -36,3 +36,29 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*.directory
+
+# testing
+coverage/
+
+# EAS
+.eas/
+
+# env
+.env

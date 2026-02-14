@@ -4,8 +4,9 @@
     "userInterfaceStyle": "automatic",
     "orientation": "default",
     "web": {
-      "output": "static"
+      "output": "single"
     },
+    "plugins": ["expo-secure-store"],
     "name": "react-native-quick-starter",
     "slug": "react-native-quick-starter"
   }
