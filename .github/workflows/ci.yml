@@ -72,7 +72,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Run tests
-        run: pnpm test -- --ci --coverage
+        run: pnpm jest --ci --coverage
 
   build:
     name: Build (Web)

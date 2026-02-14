@@ -6,10 +6,6 @@ module.exports = {
     "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@sentry/react-native|native-base|react-native-svg|i18n-js|heroui-native|tailwind-merge|tailwind-variants)",
   ],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
-  collectCoverageFrom: [
-    "src/**/*.{ts,tsx}",
-    "!src/**/*.d.ts",
-    "!src/**/index.ts",
-  ],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!src/**/*.d.ts", "!src/**/index.ts"],
   coverageDirectory: "coverage",
 };

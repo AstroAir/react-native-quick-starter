@@ -25,8 +25,7 @@ jest.mock("@expo/vector-icons", () => {
   const React = require("react");
   const { Text } = require("react-native");
   return {
-    Ionicons: (props) =>
-      React.createElement(Text, { testID: "icon" }, props.name),
+    Ionicons: (props) => React.createElement(Text, { testID: "icon" }, props.name),
   };
 });
 
@@ -37,29 +36,21 @@ jest.mock("heroui-native", () => {
 
   const Button = (props) =>
     React.createElement(View, { testID: "button", ...props }, props.children);
-  Button.Label = (props) =>
-    React.createElement(Text, props, props.children);
+  Button.Label = (props) => React.createElement(Text, props, props.children);
 
-  const Card = (props) =>
-    React.createElement(View, { testID: "card", ...props }, props.children);
-  Card.Body = (props) =>
-    React.createElement(View, props, props.children);
+  const Card = (props) => React.createElement(View, { testID: "card", ...props }, props.children);
+  Card.Body = (props) => React.createElement(View, props, props.children);
 
-  const Chip = (props) =>
-    React.createElement(View, { testID: "chip", ...props }, props.children);
-  Chip.Label = (props) =>
-    React.createElement(Text, props, props.children);
+  const Chip = (props) => React.createElement(View, { testID: "chip", ...props }, props.children);
+  Chip.Label = (props) => React.createElement(Text, props, props.children);
 
   return {
     Button,
     Card,
     Chip,
-    Separator: (props) =>
-      React.createElement(View, { testID: "separator", ...props }),
-    HeroUINativeProvider: (props) =>
-      React.createElement(View, null, props.children),
-    useThemeColor: (keys) =>
-      Array.isArray(keys) ? keys.map(() => "#000000") : "#000000",
+    Separator: (props) => React.createElement(View, { testID: "separator", ...props }),
+    HeroUINativeProvider: (props) => React.createElement(View, null, props.children),
+    useThemeColor: (keys) => (Array.isArray(keys) ? keys.map(() => "#000000") : "#000000"),
   };
 });
 
@@ -68,8 +59,7 @@ jest.mock("react-native-gesture-handler", () => {
   const { View } = require("react-native");
   const React = require("react");
   return {
-    GestureHandlerRootView: (props) =>
-      React.createElement(View, props, props.children),
+    GestureHandlerRootView: (props) => React.createElement(View, props, props.children),
     Swipeable: View,
     DrawerLayout: View,
     State: {},
